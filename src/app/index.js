@@ -8,6 +8,7 @@ function App() {
     app.appendChild(navBarMenu)
 
     const content = document.createElement('div')
+    content.setAttribute('id','content')
     content.classList.add('content')
     app.appendChild(content)
 

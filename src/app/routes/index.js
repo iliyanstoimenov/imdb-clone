@@ -14,7 +14,8 @@ async function Routes(content) {
         content.innerHTML = routes[window.location.hash.substr(1)];
     }
 
-    content.innerHTML = routes[window.location.pathname];
+    content.appendChild(routes[window.location.pathname]);
+    // content.innerHTML = routes[window.location.pathname];
 }
 
 export default Routes

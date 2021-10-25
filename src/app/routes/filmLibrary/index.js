@@ -1,4 +1,5 @@
 import Api from '../../services'
+import Card from './filmCard'
 
 class FilmLibraryPage {
     constructor() {
@@ -10,18 +11,16 @@ class FilmLibraryPage {
             .then(data => this.state = data.data.results)
     }
 
-    prepView() {
-        const view = '<ul>' + this.state.map(item => {
-            return '<li>' + item.title + '</li>';
-        }).join('') + '</ul>'
-
-        return view
+    prepView() {        
+        return Card(this.state)
     }
 
     async showComponent() {
         await this.getData()
-        const view = this.prepView()
-        document.querySelector('.content').innerHTML = view
+        const films = this.prepView()
+        const nodes = new DOMParser().parseFromString(films, 'text/html');
+        const data = nodes.body.childNodes[0]
+        return data
     }
 }
 

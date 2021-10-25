@@ -10,14 +10,14 @@ body {
 	margin: 0 auto;
 }
 
-header {
-  background: #55d6aa;
+.content {
+  width: 80%;
+	margin: 50px auto;
+  color: white
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+header {
+  background: #55d6aa;
 }
 
 .logo {
@@ -27,8 +27,9 @@ header::after {
   left: 0;
 }
 
-.nav-links {
-  float: right;
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -70,9 +71,4 @@ nav ul a::before {
 
 nav ul a:hover::before {
   width: 100%;
-}
-
-.content {
-  width: 100%;
-  color: white;
 }
