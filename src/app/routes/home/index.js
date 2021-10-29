@@ -1,5 +1,5 @@
 const homePage = `
-    <div>Home Page</div>
+    Home Page
 `;
 
 

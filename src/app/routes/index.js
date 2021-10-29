@@ -11,11 +11,10 @@ async function Routes(content) {
     };
 
     window.onpopstate = () => {
-        content.innerHTML = routes[window.location.hash.substr(1)];
+        content.replaceChildren(routes[window.location.hash.substr(1)])
     }
 
-    content.appendChild(routes[window.location.pathname]);
-    // content.innerHTML = routes[window.location.pathname];
+    content.replaceChildren(routes[window.location.pathname]);
 }
 
 export default Routes

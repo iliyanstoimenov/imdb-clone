@@ -1,5 +1,5 @@
 const aboutPage = `
-        <div>About Page</div>
+        About Page
 `;
 
 export default aboutPage
