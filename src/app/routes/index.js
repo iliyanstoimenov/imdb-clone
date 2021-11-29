@@ -3,18 +3,30 @@ import aboutPage from "./about";
 import FilmLibraryPage from "./filmLibrary";
 
 async function Routes(content) {
+    const getHTML = async () => {
+        let html
 
-    const routes = {
-        '/': homePage,
-        '/filmLibrary': await FilmLibraryPage.showComponent(),
-        '/about': aboutPage
-    };
+        if (location.hash === '#/filmLibrary') {
+            html = await FilmLibraryPage.showComponent()
+        }
+        if (location.hash === '#/') {
+            html = homePage
+        }
 
-    window.onpopstate = () => {
-        content.replaceChildren(routes[window.location.hash.substr(1)])
+        if (location.hash === '#/about') {
+            html = aboutPage
+        }
+        return html;
     }
 
-    content.replaceChildren(routes[window.location.pathname]);
+    window.onpopstate = async () => {
+        const html = await getHTML();
+
+        content.replaceChildren(html)
+    }
+    const html = await getHTML();
+
+    content.replaceChildren(await getHTML());
 }
 
 export default Routes

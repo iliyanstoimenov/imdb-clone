@@ -1,11 +1,11 @@
 const Card = (films) => {
-    const html = '<ul>' + films.reduce((html, item) => {
+    const html = '<ul class= swiper-wrapper>' + films.reduce((html, item) => {
         return html + 
-            "<div class = film>" + 
+            `<li class = swiper-slide>` + 
                 `<img src=${item.posterUrl} />` +
-                "<li class = title>" + item.title + "</li>" + 
-                "<li class = description>" + item.overview + "</li>" +  
-            "</div>";
+                "<div class = title>" + item.title + "</div>" + 
+                "<div class = description>" + item.overview + "</div>" +  
+            "</li>";
         }, "") + '</ul>';
     
     return html

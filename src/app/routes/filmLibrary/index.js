@@ -1,5 +1,6 @@
 import Api from '../../services'
 import Card from './filmCard'
+import swiper from './swiper'
 
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 
@@ -9,8 +10,8 @@ class FilmLibraryPage {
     }
 
     getPosterUrl(films) {
-        const posters = films.map(item => { 
-            return {...item, posterUrl: imgUrl + item.poster_path}
+        const posters = films.map(item => {
+            return { ...item, posterUrl: imgUrl + item.poster_path }
         })
         return posters
     }
@@ -21,12 +22,14 @@ class FilmLibraryPage {
             .then(data => this.state = data)
     }
 
-    prepView() {        
+    prepView() {
         return Card(this.state)
     }
 
     async showComponent() {
+
         await this.getFilmsData()
+
         const films = this.prepView()
         const nodes = new DOMParser().parseFromString(films, 'text/html');
         const data = nodes.body.childNodes[0]
@@ -35,8 +38,21 @@ class FilmLibraryPage {
         const sectionContent = document.createTextNode("What to watch");
         sectionTitle.appendChild(sectionContent);
         sectionTitle.classList.add('section-title')
-        data.insertBefore(sectionTitle, data.firstChild);
-        return data
+
+        const slider = document.createElement('div')
+        slider.classList.add('swiper')
+        slider.appendChild(sectionTitle)
+        slider.appendChild(data)
+
+        function reinitSwiper(swiper) {
+            setTimeout(function () {
+                swiper();
+            }, 500);
+        }
+
+        reinitSwiper(swiper())
+
+        return slider
     }
 }
 
