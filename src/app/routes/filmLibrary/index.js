@@ -1,5 +1,5 @@
 import Api from '../../services'
-import Card from './filmCard'
+import Card from './swiperCard'
 import swiper from './swiper'
 import './filmLibrary.css'
 
@@ -18,7 +18,7 @@ class FilmLibraryPage {
     }
 
     getFilmsData() {
-        return Api.get()
+        return Api.list('page=1')
             .then(data => this.getPosterUrl(data.data.results))
             .then(data => this.state = data)
     }
