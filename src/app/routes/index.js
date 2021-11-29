@@ -24,7 +24,6 @@ async function Routes(content) {
 
         content.replaceChildren(html)
     }
-    const html = await getHTML();
 
     content.replaceChildren(await getHTML());
 }

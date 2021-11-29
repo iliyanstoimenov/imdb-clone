@@ -3,8 +3,10 @@ const Card = (films) => {
         return html + 
             `<li class = swiper-slide>` + 
                 `<img src=${item.posterUrl} />` +
-                "<div class = title>" + item.title + "</div>" + 
-                "<div class = description>" + item.overview + "</div>" +  
+                '<div class = details>' +
+                    "<div class = title>" + item.title + "</div>" + 
+                    "<div class = description>" + item.overview + "</div>" +
+                '</div>' +
             "</li>";
         }, "") + '</ul>';
     

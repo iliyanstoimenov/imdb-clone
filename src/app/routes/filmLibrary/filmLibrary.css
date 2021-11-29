@@ -1,7 +1,57 @@
-li {
-    list-style-type: none;
+.swiper-wrapper {
+    height: 400px;
+    padding-left: unset;
 }
 
-.title {
-    color: red;
+.swiper-wrapper li img{
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.swiper-wrapper li .details{
+    background: #202020;
+    height: 170px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.swiper-wrapper li .title{
+    height: 30px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.swiper-wrapper li .description{
+    height: 90px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+
+.swiper-button-next {
+    color: white;
+    border: 2px solid white;
+    height: 70px;
+    width: 50px;
+}
+
+.swiper-button-prev {
+    color: white;
+    border: 2px solid white;
+    height: 70px;
+    width: 50px;
 }

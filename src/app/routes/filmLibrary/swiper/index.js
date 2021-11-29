@@ -1,12 +1,21 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+import {Swiper, Navigation, Pagination, Parallax } from 'swiper';
+import 'swiper/css/bundle';
+
+Swiper.use([Navigation, Pagination, Parallax]);
 
 const swiper = () => {
     return () => new Swiper('.swiper', {
-        speed: 400,
-        spaceBetween: 100,
+        speed: 100,
+        spaceBetween: 150,
         slidesPerView: 6,
-        observer: true
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        observer: true, 
+        observeParents: true,
+        parallax:true,
     });
 }
 

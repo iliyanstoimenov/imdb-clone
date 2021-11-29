@@ -1,23 +1,24 @@
 body {
 	margin: 0;
-	background: #222;
-	font-family: 'Work Sans', sans-serif;
+	background: rgb(0, 0, 0);
+	font-family: Roboto,Helvetica,Arial,sans-serif;
 	font-weight: 800;
+  font-size: 15px;
 }
 
 .container {
-	width: 80%;
+	max-width: 1024px;
 	margin: 0 auto;
 }
 
 .content {
-  width: 80%;
-	margin: 50px auto;
+  max-width: 1024px;
+	margin: 0px auto;
   color: white
 }
 
 header {
-  background: #55d6aa;
+  background: #202020;
 }
 
 .logo {
@@ -48,21 +49,21 @@ nav li {
 }
 
 nav a {
-  color: #444;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
 nav ul a:hover {
-  color: #000;
+  color: white;
 }
 
 nav ul a::before {
   content: '';
   display: block;
   height: 5px;
-  background-color: #444;
+  background-color: white;
   position: absolute;
   top: 0;
   width: 0%;
@@ -80,6 +81,6 @@ nav ul a:hover::before {
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: 30px;
   margin: 40px 0;
 }
