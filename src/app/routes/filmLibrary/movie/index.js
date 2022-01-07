@@ -1,4 +1,5 @@
 import Api from '../../../services'
+import FilmCard from './filmCard';
 
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 
@@ -24,7 +25,7 @@ class Movie {
         const string = url.replace(/[A-Za-z$-]/g, "");
         const id = string.substr(3)
         await this.getMovie(id)
-        console.log(this.state)
+        return FilmCard(this.state)
     }
 }
 

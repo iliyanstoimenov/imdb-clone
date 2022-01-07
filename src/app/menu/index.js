@@ -1,4 +1,5 @@
 import logoIco from '../../assets/logo.svg'
+import setFavicons from './favicon'
 
 function navBar() {
     const header = document.createElement("header")
@@ -46,6 +47,8 @@ function navBar() {
     nav.appendChild(ul)
     container.appendChild(nav)
     header.appendChild(container)
+
+    setFavicons(logoIco);
 
     return header
 }

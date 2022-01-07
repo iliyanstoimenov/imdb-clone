@@ -56,7 +56,7 @@ class FilmLibraryPage {
         function reinitSwiper(swiper) {
             setTimeout(function () {
                 swiper();
-            }, 500);
+            }, 1);
         }
 
         reinitSwiper(swiper())

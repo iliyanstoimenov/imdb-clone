@@ -3,6 +3,12 @@
     padding-left: unset;
 }
 
+.swiper-wrapper a {
+    color: white;
+    cursor: unset;
+    text-decoration: unset;
+}
+
 .swiper-wrapper li img{
     height: 240px;
     width: 100%;
@@ -11,6 +17,7 @@
 }
 
 .swiper-wrapper li .details{
+    color: white;
     background: #202020;
     height: 170px;
     border-bottom-left-radius: 5px;

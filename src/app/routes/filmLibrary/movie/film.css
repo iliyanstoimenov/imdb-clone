@@ -1,0 +1,43 @@
+.film-wrapper {
+    padding-top: 17px;
+    font-weight: bold;
+    width: auto;
+}
+
+.film-wrapper .title {
+    font-size: 30px;
+}
+
+.film-wrapper .film-details {
+    display: grid;
+    grid-template-columns: auto auto;
+    vertical-align: center;
+}
+
+.film-wrapper .voting {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 6px;
+}
+
+.film-wrapper .rating {
+    display: grid;
+    grid-template-rows: auto auto ;
+    text-align: right;
+}
+
+.film-wrapper .popularity {
+    display: grid;
+    grid-template-rows: auto auto ;
+    text-align: right;
+}
+
+.film-wrapper .general-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    color: grey;
+    opacity: 0.8;
+    font-size: 15px;
+    padding: 13px 0;
+}
