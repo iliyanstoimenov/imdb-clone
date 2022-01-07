@@ -8,9 +8,14 @@
     font-size: 30px;
 }
 
+.film-wrapper .film-poster {
+    width: 300px;
+}
+
 .film-wrapper .film-details {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
     vertical-align: center;
 }
 
@@ -22,14 +27,25 @@
 
 .film-wrapper .rating {
     display: grid;
-    grid-template-rows: auto auto ;
+    grid-template-rows: 1fr 1fr;
     text-align: right;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.film-wrapper .rating h2 {
+    background-image: url(../../../../assets/star.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: -1px 9px;
 }
 
 .film-wrapper .popularity {
     display: grid;
     grid-template-rows: auto auto ;
     text-align: right;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .film-wrapper .general-details {
@@ -40,4 +56,11 @@
     opacity: 0.8;
     font-size: 15px;
     padding: 13px 0;
+}
+
+.film-wrapper .video {
+    width: 700px;
+    height: 450px;
+    border: unset;
+    padding-left: 15px;
 }
