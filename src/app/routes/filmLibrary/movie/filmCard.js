@@ -28,14 +28,14 @@ const FilmCard = (filmData) => {
                 `</div>` +
             `</div>` +
         `</div>`+
-        `<img src=${data.imgUrl} class=film-poster >` +
-        `<iframe class=video src="https://www.youtube.com/embed/JfVOs4VSpmA"></iframe>` +
+        `<div class=film-box>` +
+            `<img src=${data.imgUrl} class=film-poster >` +
+            `<iframe class=video src="https://www.youtube.com/embed/JfVOs4VSpmA"></iframe>` +
+        `</div>`
     '</div>'
 
     const node = new DOMParser().parseFromString(html, 'text/html');
     const film = node.body.childNodes[0]
-
-    console.log(data)
     
     return film
 }

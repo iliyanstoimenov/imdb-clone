@@ -1,5 +1,6 @@
 import logoIco from '../../assets/logo.svg'
-import setFavicons from './favicon'
+import setFavicons from './favicon';
+import burgetMenu from './burgetMenu';
 
 function navBar() {
     const header = document.createElement("header")
@@ -7,7 +8,10 @@ function navBar() {
 
     const container = document.createElement("div")
     container.classList.add('container')
-    
+
+    const burgetMenuNode = new DOMParser().parseFromString(burgetMenu, 'text/html').body.childNodes[0];
+    container.appendChild(burgetMenuNode);
+
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
     ul.classList.add('nav-links')
@@ -19,7 +23,7 @@ function navBar() {
     logoSVG.src = logoIco
     logo.appendChild(logoSVG)
     nav.appendChild(logo)
-    
+
     const home = document.createElement("li")
     const homeText = document.createTextNode('Home');
     const homeLink = document.createElement("a")

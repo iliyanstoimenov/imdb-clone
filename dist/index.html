@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMDB Clone App</title>
     <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/mobile.css">
     <link rel="stylesheet" href="../src/app/routes/filmLibrary/filmLibrary.css">
 </head>
 
@@ -14,6 +15,20 @@
     <div id="main"></div>
     <script src="main.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script>
+        document.getElementById("toggle").addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('show');
+            document.getElementById('nav-icon').classList.toggle('open');
+        }, false);
+    
+        document.addEventListener('touchmove', function() {
+            document.querySelector('nav').classList.remove("show");
+            document.getElementById('nav-icon').classList.remove('open');
+        }, false);
+
+        // console.log(document.getElementsByClassName('nav-links')[0].children)
+
+    </script>
 </body>
 
 </html>
