@@ -2,6 +2,12 @@ import logoIco from '../../assets/logo.svg'
 import setFavicons from './favicon';
 import burgetMenu from './burgetMenu';
 
+const goTo = (path) => {
+    document.querySelector('nav').classList.remove('show')
+    document.getElementById('nav-icon').classList.remove('open')
+    window.location.href = path
+}
+
 function navBar() {
     const header = document.createElement("header")
     header.classList.add('header')
@@ -27,7 +33,7 @@ function navBar() {
     const home = document.createElement("li")
     const homeText = document.createTextNode('Home');
     const homeLink = document.createElement("a")
-    homeLink.href = '#/'
+    homeLink.onclick = () => goTo('#/')
     homeLink.appendChild(homeText)
     home.appendChild(homeLink)
     ul.appendChild(home)
@@ -35,7 +41,7 @@ function navBar() {
     const contact = document.createElement("li")
     const contactText = document.createTextNode('Film Library');
     const contactLink = document.createElement("a")
-    contactLink.href = '#/filmLibrary'
+    contactLink.onclick = () => goTo('#/filmLibrary')
     contactLink.appendChild(contactText)
     contact.appendChild(contactLink)
     ul.appendChild(contact)
@@ -43,7 +49,7 @@ function navBar() {
     const about = document.createElement("li")
     const aboutText = document.createTextNode('About');
     const aboutLink = document.createElement("a")
-    aboutLink.href = '#/about'
+    aboutLink.onclick = () => goTo('#/about')
     aboutLink.appendChild(aboutText)
     about.appendChild(aboutLink)
     ul.appendChild(about)
