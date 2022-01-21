@@ -1,4 +1,6 @@
 import './film.css'
+import feedbackForm from './feedbackForm'
+import countries from '../../../../utils/countries'
 
 const imgPath = 'https://image.tmdb.org/t/p/w500'
 
@@ -34,9 +36,11 @@ const FilmCard = (filmData) => {
         `</div>`
     '</div>'
 
-    const node = new DOMParser().parseFromString(html, 'text/html');
-    const film = node.body.childNodes[0]
-    
+    const filmNode = new DOMParser().parseFromString(html, 'text/html');
+    const film = filmNode.body.childNodes[0]
+
+    film.appendChild(feedbackForm)
+
     return film
 }
 
