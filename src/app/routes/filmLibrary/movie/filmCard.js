@@ -1,6 +1,5 @@
 import './film.css'
 import feedbackForm from './feedbackForm'
-import countries from '../../../../utils/countries'
 
 const imgPath = 'https://image.tmdb.org/t/p/w500'
 
